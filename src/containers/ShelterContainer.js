@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import  { connect }  from 'react-redux'
 
-import React, { Component } from 'react'
-
 class ShelterContainer extends Component {
     render() {
         return (
@@ -13,4 +11,13 @@ class ShelterContainer extends Component {
     }
 }
 
-export default connect()(ShelterContainer)
+//structure what your props look like
+const mapStateToProps = state => {
+    console.log(state)
+    return {
+        shelters: state.shelterReducer.shelters,
+        loading: state.shelterReducer.loading
+    }
+}
+
+export default connect(mapStateToProps)(ShelterContainer)
