@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import  { connect }  from 'react-redux'
 
 class ShelterContainer extends Component {
+    componentDidMount(){
+        
+    }
+
     render() {
         const shelters = this.props.shelters.map((shelter, index) => {
             return <li key={index}>{shelter.name}</li>
