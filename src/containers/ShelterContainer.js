@@ -3,9 +3,12 @@ import  { connect }  from 'react-redux'
 
 class ShelterContainer extends Component {
     render() {
+        const shelters = this.props.shelters.map((shelter, index) => {
+            return <li key={index}>{shelter.name}</li>
+        })
         return (
-            <div>
-                
+            <div className="ShelterContainer">
+                <ul>{this.props.loading ? <h3>Loading...</h3> : shelters}</ul>
             </div>
         )
     }
