@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import  { connect }  from 'react-redux'
+import { getShelters } from '../actions/shelters'
 
 class ShelterContainer extends Component {
     componentDidMount(){
-        
+        this.props.getShelters()
     }
 
     render() {
@@ -27,4 +28,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(ShelterContainer)
+export default connect(mapStateToProps, { getShelters })(ShelterContainer)
