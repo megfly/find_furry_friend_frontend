@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import  { connect }  from 'react-redux'
 import { getShelters } from '../actions/shelters'
+import Card from 'react-bootstrap/Card';
 
 class ShelterContainer extends Component {
     componentDidMount(){
