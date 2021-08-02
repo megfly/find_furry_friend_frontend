@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import  { connect }  from 'react-redux'
 import { getShelters } from '../actions/shelters'
 import Card from 'react-bootstrap/Card';
+import { CardGroup } from 'react-bootstrap';
+import { Row } from 'react-bootstrap'
 
 class ShelterContainer extends Component {
     componentDidMount(){
@@ -10,7 +12,18 @@ class ShelterContainer extends Component {
 
     render() {
         const shelters = this.props.shelters.map((shelter, index) => {
-            return <li key={index}>{shelter.name}</li>
+            return <CardGroup>
+            <Card>
+              {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
+              <Card.Body>
+                <Card.Title>{shelter.name}</Card.Title>
+                <Card.Text>
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                </Card.Text>
+              </Card.Body>
+              </Card>
+              </CardGroup>
         })
         return (
             <div className="ShelterContainer">
