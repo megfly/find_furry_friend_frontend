@@ -23,10 +23,9 @@ class ShelterContainer extends Component {
                   <p>{shelter.zipcode}</p>
                   <p>{shelter.email}</p>
                   <p>{shelter.phone}</p>
-
                 </Card.Text>
               </Card.Body>
-              </Card>
+            </Card>
               </CardGroup>
         })
         return (
