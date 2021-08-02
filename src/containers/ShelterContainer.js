@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import  { connect }  from 'react-redux'
 import { getShelters } from '../actions/shelters'
+import Card from 'react-bootstrap/Card';
+import { CardGroup } from 'react-bootstrap';
+import { Row } from 'react-bootstrap'
 
 class ShelterContainer extends Component {
     componentDidMount(){
@@ -9,7 +12,21 @@ class ShelterContainer extends Component {
 
     render() {
         const shelters = this.props.shelters.map((shelter, index) => {
-            return <li key={index}>{shelter.name}</li>
+            return <CardGroup>
+            <Card>
+              {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
+              <Card.Body>
+                <Card.Title>{shelter.name}</Card.Title>
+                <Card.Text>
+                  <p>{shelter.street_address}</p>
+                  <p>{shelter.city}</p>
+                  <p>{shelter.zipcode}</p>
+                  <p>{shelter.email}</p>
+                  <p>{shelter.phone}</p>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+              </CardGroup>
         })
         return (
             <div className="ShelterContainer">
