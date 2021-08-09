@@ -9,6 +9,7 @@ class ShelterContainer extends Component {
     }
 
     render() {
+        <h1>Animal Shelters</h1>
             const shelters = this.props.shelters.map((shelter, index) => {
                 return <ShelterDisplay
                     key={index}
