@@ -4,6 +4,7 @@ import { getShelters } from '../actions/shelters'
 import { Card } from "react-bootstrap";
 // import { CardGroup } from 'react-bootstrap';
 // import { Row } from 'react-bootstrap'
+import "../components/Box.css" 
 
 class ShelterContainer extends Component {
     componentDidMount(){
@@ -14,7 +15,9 @@ class ShelterContainer extends Component {
         const shelters = this.props.shelters.map((shelter, index) => {
             return (
             <div className="Shelter">
+                <div className="grid">
                 <Card style={{ width: '18rem' }}>
+                <div className="box">
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
                         <Card.Title>Card Title</Card.Title>
@@ -24,7 +27,9 @@ class ShelterContainer extends Component {
                         </Card.Text>
                     {/* <Button variant="primary">Go somewhere</Button> */}
                     </Card.Body>
+                    </div>
                 </Card>
+                </div>
             </div>
             )
                   {/* <p>{shelter.street_address}</p>
