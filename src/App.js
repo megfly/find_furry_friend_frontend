@@ -7,8 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <h3>Animal Shelters</h3> */}
-        <GridBoxes />
+        <h1>Animal Shelters</h1>
         <ShelterContainer />
       </header>
     </div>
