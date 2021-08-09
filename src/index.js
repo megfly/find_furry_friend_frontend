@@ -9,6 +9,8 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension'
 // import reducers
 import rootReducer from './reducers'
+//bootstrap
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 //setup redux store
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
