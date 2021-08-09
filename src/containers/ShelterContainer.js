@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import  { connect }  from 'react-redux'
 import { getShelters } from '../actions/shelters'
-import Card from 'react-bootstrap/Card';
-import { CardGroup } from 'react-bootstrap';
-import { Row } from 'react-bootstrap'
+import { Card } from "react-bootstrap";
+// import { CardGroup } from 'react-bootstrap';
+// import { Row } from 'react-bootstrap'
 
 class ShelterContainer extends Component {
     componentDidMount(){
@@ -12,21 +12,27 @@ class ShelterContainer extends Component {
 
     render() {
         const shelters = this.props.shelters.map((shelter, index) => {
-            return <CardGroup>
-            <Card>
-              {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
-              <Card.Body>
-                <Card.Title>{shelter.name}</Card.Title>
-                <Card.Text>
-                  <p>{shelter.street_address}</p>
+            return (
+            <div className="Shelter">
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+                        </Card.Text>
+                    {/* <Button variant="primary">Go somewhere</Button> */}
+                    </Card.Body>
+                </Card>
+            </div>
+            )
+                  {/* <p>{shelter.street_address}</p>
                   <p>{shelter.city}</p>
                   <p>{shelter.zipcode}</p>
                   <p>{shelter.email}</p>
-                  <p>{shelter.phone}</p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-              </CardGroup>
+                  <p>{shelter.phone}</p> */}
+   
         })
         return (
             <div className="ShelterContainer">
