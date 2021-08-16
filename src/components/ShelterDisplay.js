@@ -26,16 +26,6 @@ const ShelterDisplay = (props) => {
     
     )
 
-    // const renderCard = (props, index) => {
-    //     <Card style={{ width: "18rem" }} key={index} className="box">
-    //     {/* <Card.Img variant="top" src="holder.js/100px180" src={card.image} /> */}
-    //     <Card.Body>
-    //       <Card.Title>{props.name}</Card.Title>
-    //       <Card.Text>{props.text}</Card.Text>
-    //     </Card.Body>
-    //   </Card>
-    // }
-
 }
 
 export default ShelterDisplay
