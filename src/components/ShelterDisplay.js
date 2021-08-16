@@ -19,7 +19,9 @@ const ShelterDisplay = (props) => {
           <Card.Text>{props.email}</Card.Text>
           <Card.Text>{props.phone}</Card.Text>
         </Card.Body>
-
+        <Card.Footer>
+            <small className="text-muted">{props.shelter_id}</small>
+        </Card.Footer>
       </Card>
     
     )
