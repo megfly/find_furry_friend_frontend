@@ -6,9 +6,10 @@ const ShelterDisplay = (props) => {
     console.log("this is shelterdisplay props", props)
 
     return (
-          
-        <Card style={{ width: "18rem" }} className="box">
+    
+    <Card style={{ width: "18rem" }} className="box">
         {/* <Card.Img variant="top" src="holder.js/100px180" src={card.image} /> */}
+        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>
           <Card.Text>{props.text}</Card.Text>
@@ -27,10 +28,6 @@ const ShelterDisplay = (props) => {
     //   </Card>
     // }
 
-
-    // return (
-    //     <div className="grid">{props.map(renderCard)}</div>
-    //     )
 }
 
 export default ShelterDisplay
