@@ -12,8 +12,14 @@ const ShelterDisplay = (props) => {
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>
-          <Card.Text>{props.text}</Card.Text>
+          <Card.Text>{props.address}</Card.Text>
+          <Card.Text>{props.city}</Card.Text>
+          <Card.Text>{props.state}</Card.Text>
+          <Card.Text>{props.zipcode}</Card.Text>
+          <Card.Text>{props.email}</Card.Text>
+          <Card.Text>{props.phone}</Card.Text>
         </Card.Body>
+
       </Card>
     
     )
