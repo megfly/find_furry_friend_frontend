@@ -15,10 +15,21 @@ class ShelterContainer extends Component {
     }
 
     handleSearch = (event) => {
-        console.log("search", event.target.value)
+        // console.log("search", event.target.value)
         this.setState({
             searchinput: event.target.value
         })
+    }
+
+    filterShelters = () => {
+        if (this.state.searchinput !== '') {
+            return this.props.shelters.filter(shelter => {
+                // debugger 
+                return shelter.zipcode.includes(this.state.searchinput)
+            })
+        } else {
+            return this.props.shelters
+        }
     }
 
     render() {
@@ -50,7 +61,8 @@ class ShelterContainer extends Component {
             />
             <br />
             <div className="grid">
-                {this.props.loading ? <h3>Loading...</h3> : shelters}
+                {this.props.loading ? <h3>Loading...</h3> : shelters }
+                {/* shelters */}
             </div>
         </Fragment>
         ) 
