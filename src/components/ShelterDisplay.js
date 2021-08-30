@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import "./Box.css"
 
 const ShelterDisplay = (props) => {
-    console.log("this is shelterdisplay props", props)
+    // console.log("this is shelterdisplay props", props)
 
     return (
     
