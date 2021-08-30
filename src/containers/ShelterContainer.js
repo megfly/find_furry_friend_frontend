@@ -28,6 +28,17 @@ class ShelterContainer extends Component {
         }
     }
 
+    sortShelters() {
+        // 2
+        if (this.state.sorted === true) {
+            let sheltersCopy = [...this.filterShelters()];
+            sheltersCopy.sort(this.compareShelters())
+            return sheltersCopy;
+        } else {
+            return this.filterShelters()
+        }
+    }
+
     handleSearch = (event) => {
         // console.log("search", event.target.value)
         this.setState({
