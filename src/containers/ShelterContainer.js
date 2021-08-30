@@ -5,6 +5,11 @@ import { getShelters } from '../actions/shelters'
 import ShelterDisplay from '../components/ShelterDisplay'
 
 class ShelterContainer extends Component {
+    //local state
+    state = {
+        searchinput: ''
+    }
+    
     componentDidMount(){
         this.props.getShelters()
     }
