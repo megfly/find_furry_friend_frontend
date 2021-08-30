@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Fragment } from 'react'
 import  { connect }  from 'react-redux'
 import { getShelters } from '../actions/shelters'
 import ShelterDisplay from '../components/ShelterDisplay'
@@ -9,7 +10,6 @@ class ShelterContainer extends Component {
     }
 
     render() {
-        <h1>Animal Shelters</h1>
             const shelters = this.props.shelters.map((shelter, index) => {
                 return <ShelterDisplay
                     key={index}
@@ -24,12 +24,21 @@ class ShelterContainer extends Component {
                     phone={shelter.phone}
                 />
             })
+        
 
-        return (
+       return (
+        <Fragment>
+        <input 
+            type="text"
+            placeholder="search..."
+        />
+    
+        
             <div className="grid">
                 {this.props.loading ? <h3>Loading...</h3> : shelters}
             </div>
-        )
+            </Fragment>
+        ) 
     }
 }
 
