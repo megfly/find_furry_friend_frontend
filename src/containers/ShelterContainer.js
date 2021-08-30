@@ -15,6 +15,19 @@ class ShelterContainer extends Component {
         this.props.getShelters()
     }
 
+    toggleState = () => {
+        // 1
+        if (this.state.sorted) {
+            this.setState({
+                sorted: false
+            })
+        } else {
+            this.setState({
+                sorted: true 
+            })
+        }
+    }
+
     handleSearch = (event) => {
         // console.log("search", event.target.value)
         this.setState({
