@@ -28,16 +28,19 @@ class ShelterContainer extends Component {
 
        return (
         <Fragment>
-        <input 
-            type="text"
-            placeholder="search..."
-        />
-    
-        
+            <br />
+            <input 
+                type="text"
+                name="shelter-search-by-zipcode"
+                placeholder="search by zipcode..."
+                onChange={this.handleSearch}
+                value={this.state.searchinput}
+            />
+            <br />
             <div className="grid">
                 {this.props.loading ? <h3>Loading...</h3> : shelters}
             </div>
-            </Fragment>
+        </Fragment>
         ) 
     }
 }
