@@ -81,21 +81,20 @@ class ShelterContainer extends Component {
 
 
     render() {
-            const shelters = this.props.shelters.map((shelter, index) => {
-                return <ShelterDisplay
-                    key={index}
-                    id={shelter.id}
-                    shelter_id={shelter.shelter_id}
-                    name={shelter.name}
-                    address={shelter.street_address}
-                    city={shelter.city}
-                    state={shelter.state}
-                    zipcode={shelter.zipcode}
-                    email={shelter.email}
-                    phone={shelter.phone}
-                />
-            })
-        
+            // const shelters = this.props.shelters.map((shelter, index) => {
+            //     return <ShelterDisplay
+            //         key={index}
+            //         id={shelter.id}
+            //         shelter_id={shelter.shelter_id}
+            //         name={shelter.name}
+            //         address={shelter.street_address}
+            //         city={shelter.city}
+            //         state={shelter.state}
+            //         zipcode={shelter.zipcode}
+            //         email={shelter.email}
+            //         phone={shelter.phone}
+            //     />
+            // })
 
        return (
         <Fragment>
@@ -109,7 +108,20 @@ class ShelterContainer extends Component {
             />
             <br />
             <div className="grid">
-                {this.props.loading ? <h3>Loading...</h3> : shelters }
+                {this.props.loading ? <h3>Loading...</h3> : this.sortShelters().map((shelter, index) => {
+                    return <ShelterDisplay
+                        key={index}
+                        id={shelter.id}
+                        shelter_id={shelter.shelter_id}
+                        name={shelter.name}
+                        address={shelter.street_address}
+                        city={shelter.city}
+                        state={shelter.state}
+                        zipcode={shelter.zipcode}
+                        email={shelter.email}
+                        phone={shelter.phone}
+                    />
+                }) }
                 {/* shelters */}
             </div>
         </Fragment>
