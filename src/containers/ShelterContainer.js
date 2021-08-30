@@ -7,6 +7,7 @@ import ShelterDisplay from '../components/ShelterDisplay'
 class ShelterContainer extends Component {
     //local state
     state = {
+        sorted: false,
         searchinput: ''
     }
 
