@@ -39,6 +39,28 @@ class ShelterContainer extends Component {
         }
     }
 
+    compareShelters = () => {
+        //3
+        return function (a, b) { 
+            //the parameters (a and b)are two elements from the array
+              let nameA = a.zipcode
+              let nameB = b.zipcode 
+             
+            //if a appears before the second argument (b), return negative numner
+              if (nameA < nameB) { //ascending
+                return -1;
+              }
+            
+              //if first arg appears after, return positive number
+              if (nameA > nameB) { //descending
+                return 1;
+              }
+            
+              // if args are equal we return 0
+              return 0;
+            }
+    }
+
     handleSearch = (event) => {
         // console.log("search", event.target.value)
         this.setState({
@@ -56,6 +78,7 @@ class ShelterContainer extends Component {
             return this.props.shelters
         }
     }
+
 
     render() {
             const shelters = this.props.shelters.map((shelter, index) => {
