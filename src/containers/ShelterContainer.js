@@ -9,9 +9,16 @@ class ShelterContainer extends Component {
     state = {
         searchinput: ''
     }
-    
+
     componentDidMount(){
         this.props.getShelters()
+    }
+
+    handleSearch = (event) => {
+        console.log("search", event.target.value)
+        this.setState({
+            searchinput: event.target.value
+        })
     }
 
     render() {
