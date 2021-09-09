@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react'
 import { getPets } from '../actions/pets'
+import PetDisplay from '../components/PetDisplay'
 
 class PetContainer extends Component {
     render() {
         const pets = this.props.pets.map((pet, index) => {
-                return <ShelterDisplay
+                return <PetDisplay
                     key={index}
                     shelter_id={pet.shelter_id}
                     id={pet.id}
