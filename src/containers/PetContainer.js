@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react'
+import { getPets } from '../actions/pets'
 
-export default class PetContainer extends Component {
+class PetContainer extends Component {
     render() {
         return (
             <div>
@@ -9,3 +11,13 @@ export default class PetContainer extends Component {
         )
     }
 }
+
+const mapStateToProps = state => {
+    console.log("pets", state)
+    return {
+        pets: state.petsreducer.pets,
+        loading: state.petsreducer.loading
+    }
+}
+
+export default connect(mapStateToProps, { getPets })(PetContainer)
