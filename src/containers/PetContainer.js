@@ -3,11 +3,14 @@ import { connect } from 'react'
 import { getPets } from '../actions/pets'
 import PetDisplay from '../components/PetDisplay'
 
-class PetContainer extends Component {
+class PetContainer extends Component { 
 
     componentDidMount(){
-        debugger
+       // debugger
         this.props.getPets()
+    }
+
+    componentDidCatch(){
     }
 
     render() {
@@ -42,15 +45,15 @@ class PetContainer extends Component {
 
 const mapStateToProps = state => {
     console.log(state) 
-    // return {
-    //     pets: state.petsReducer.pets,
-    //     loading: state.petsReducer.loading
-    // }
+    return {
+        pets: state.petsReducer.pets,
+        loading: state.petsReducer.loading
+    }
 }
 //error here????
-//export default connect(mapStateToProps, { getPets })(PetContainer)
+export default connect(mapStateToProps, { getPets })(PetContainer)
 //export default connect(mapStateToProps)(PetContainer)
-export default PetContainer
+//export default PetContainer
 
 // :shelter_id,
 // :name,
