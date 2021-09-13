@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react'
 import { getPets } from '../actions/pets'
-import PetDisplay from '../components/PetDisplay'
+//import PetDisplay from '../components/PetDisplay'
 
 class PetContainer extends Component { 
 
     componentDidMount(){
-       // debugger
         this.props.getPets()
-    }
-
-    componentDidCatch(){
     }
 
     render() {
@@ -44,8 +40,7 @@ class PetContainer extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    debugger 
+const mapStateToProps = state => { 
     console.log(state) 
     return {
         pets: state.petsReducer.pets,
@@ -53,21 +48,4 @@ const mapStateToProps = state => {
     }
 }
 //error here????
-//export default connect(mapStateToProps, { getPets })(PetContainer)
-export default connect(mapStateToProps)(PetContainer)
-//export default PetContainer
-
-// :shelter_id,
-// :name,
-// :animal_type,
-// :breed,
-// :size,
-// :gender,
-// :age,
-// :color,
-// :image,
-// :good_with_children,
-// :good_with_dogs,
-// :good_with_cats,
-// :house_trained,
-// :vaccinated
+export default connect(mapStateToProps, { getPets })(PetContainer)

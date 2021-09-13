@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import ShelterContainer from './containers/ShelterContainer';
 import PetContainer from './containers/PetContainer';
@@ -10,7 +9,7 @@ function App() {
         <h1>Animal Shelters</h1>
         <ShelterContainer />
         <h1>Pets</h1>
-        <PetContainer />
+        {/* <PetContainer /> */}
       </header>
     </div>
   );
