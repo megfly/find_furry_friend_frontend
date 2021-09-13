@@ -34,15 +34,15 @@ class PetContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    debugger 
-    return {
-        pets: state.petsReducer.pets,
-        loading: state.petsReducer.loading
-    }
+    console.log(state) 
+    // return {
+    //     pets: state.petsReducer.pets,
+    //     loading: state.petsReducer.loading
+    // }
 }
 //error here????
 //export default connect(mapStateToProps, { getPets })(PetContainer)
-export default connect(mapStateToProps, { getPets })(PetContainer)
+export default connect(mapStateToProps)(PetContainer)
 
 // :shelter_id,
 // :name,
