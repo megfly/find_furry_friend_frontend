@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import ShelterContainer from './containers/ShelterContainer';
-import GridBoxes from './components/GridBoxes'
 import PetContainer from './containers/PetContainer';
 
 function App() {
@@ -10,6 +9,7 @@ function App() {
       <header className="App-header">
         <h1>Animal Shelters</h1>
         <ShelterContainer />
+        <h1>Pets</h1>
         <PetContainer />
       </header>
     </div>

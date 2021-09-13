@@ -14,6 +14,7 @@ class PetContainer extends Component {
     }
 
     render() {
+        console.log("pet", this.props)
         return <div></div>
         // const pets = this.props.pets.map((pet, index) => {
         //         return <PetDisplay
@@ -44,6 +45,7 @@ class PetContainer extends Component {
 }
 
 const mapStateToProps = state => {
+    debugger 
     console.log(state) 
     return {
         pets: state.petsReducer.pets,
@@ -51,8 +53,8 @@ const mapStateToProps = state => {
     }
 }
 //error here????
-export default connect(mapStateToProps, { getPets })(PetContainer)
-//export default connect(mapStateToProps)(PetContainer)
+//export default connect(mapStateToProps, { getPets })(PetContainer)
+export default connect(mapStateToProps)(PetContainer)
 //export default PetContainer
 
 // :shelter_id,

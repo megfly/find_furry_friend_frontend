@@ -81,6 +81,7 @@ class ShelterContainer extends Component {
 
 
     render() {
+        console.log("shelter", this.props)
             // const shelters = this.props.shelters.map((shelter, index) => {
             //     return <ShelterDisplay
             //         key={index}
