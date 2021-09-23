@@ -7,7 +7,7 @@ import ShelterDisplay from '../components/ShelterDisplay'
 class ShelterContainer extends Component {
     //local state
     state = {
-        sorted: false,
+        // sorted: false,
         searchinput: ''
     }
 
@@ -15,51 +15,51 @@ class ShelterContainer extends Component {
         this.props.getShelters()
     }
 
-    toggleState = () => {
-        // 1
-        if (this.state.sorted) {
-            this.setState({
-                sorted: false
-            })
-        } else {
-            this.setState({
-                sorted: true 
-            })
-        }
-    }
+    // toggleState = () => {
+    //     // 1
+    //     if (this.state.sorted) {
+    //         this.setState({
+    //             sorted: false
+    //         })
+    //     } else {
+    //         this.setState({
+    //             sorted: true 
+    //         })
+    //     }
+    // }
 
-    sortShelters() {
-        // 2
-        if (this.state.sorted === true) {
-            let sheltersCopy = [...this.filterShelters()];
-            sheltersCopy.sort(this.compareShelters())
-            return sheltersCopy;
-        } else {
-            return this.filterShelters()
-        }
-    }
+    // sortShelters() {
+    //     // 2
+    //     if (this.state.sorted === true) {
+    //         let sheltersCopy = [...this.filterShelters()];
+    //         sheltersCopy.sort(this.compareShelters())
+    //         return sheltersCopy;
+    //     } else {
+    //         return this.filterShelters()
+    //     }
+    // }
 
-    compareShelters = () => {
-        //3
-        return function (a, b) { 
-            //the parameters (a and b)are two elements from the array
-              let nameA = a.zipcode
-              let nameB = b.zipcode 
+    // compareShelters = () => {
+    //     //3
+    //     return function (a, b) { 
+    //         //the parameters (a and b)are two elements from the array
+    //           let nameA = a.zipcode
+    //           let nameB = b.zipcode 
              
-            //if a appears before the second argument (b), return negative numner
-              if (nameA < nameB) { //ascending
-                return -1;
-              }
+    //         //if a appears before the second argument (b), return negative numner
+    //           if (nameA < nameB) { //ascending
+    //             return -1;
+    //           }
             
-              //if first arg appears after, return positive number
-              if (nameA > nameB) { //descending
-                return 1;
-              }
+    //           //if first arg appears after, return positive number
+    //           if (nameA > nameB) { //descending
+    //             return 1;
+    //           }
             
-              // if args are equal we return 0
-              return 0;
-            }
-    }
+    //           // if args are equal we return 0
+    //           return 0;
+    //         }
+    // }
 
     handleSearch = (event) => {
         // console.log("search", event.target.value)
@@ -109,7 +109,7 @@ class ShelterContainer extends Component {
             />
             <br />
             <div className="grid">
-                {this.props.loading ? <h3>Loading...</h3> : this.sortShelters().map((shelter, index) => {
+                {this.props.loading ? <h3>Loading...</h3> : this.filterShelters().map((shelter, index) => {
                     return <ShelterDisplay
                         key={index}
                         id={shelter.id}
