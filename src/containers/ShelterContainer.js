@@ -7,59 +7,12 @@ import ShelterDisplay from '../components/ShelterDisplay'
 class ShelterContainer extends Component {
     //local state
     state = {
-        // sorted: false,
         searchinput: ''
     }
 
     componentDidMount(){
         this.props.getShelters()
     }
-
-    // toggleState = () => {
-    //     // 1
-    //     if (this.state.sorted) {
-    //         this.setState({
-    //             sorted: false
-    //         })
-    //     } else {
-    //         this.setState({
-    //             sorted: true 
-    //         })
-    //     }
-    // }
-
-    // sortShelters() {
-    //     // 2
-    //     if (this.state.sorted === true) {
-    //         let sheltersCopy = [...this.filterShelters()];
-    //         sheltersCopy.sort(this.compareShelters())
-    //         return sheltersCopy;
-    //     } else {
-    //         return this.filterShelters()
-    //     }
-    // }
-
-    // compareShelters = () => {
-    //     //3
-    //     return function (a, b) { 
-    //         //the parameters (a and b)are two elements from the array
-    //           let nameA = a.zipcode
-    //           let nameB = b.zipcode 
-             
-    //         //if a appears before the second argument (b), return negative numner
-    //           if (nameA < nameB) { //ascending
-    //             return -1;
-    //           }
-            
-    //           //if first arg appears after, return positive number
-    //           if (nameA > nameB) { //descending
-    //             return 1;
-    //           }
-            
-    //           // if args are equal we return 0
-    //           return 0;
-    //         }
-    // }
 
     handleSearch = (event) => {
         // console.log("search", event.target.value)
@@ -81,21 +34,7 @@ class ShelterContainer extends Component {
 
 
     render() {
-        console.log("shelter", this.props)
-            // const shelters = this.props.shelters.map((shelter, index) => {
-            //     return <ShelterDisplay
-            //         key={index}
-            //         id={shelter.id}
-            //         shelter_id={shelter.shelter_id}
-            //         name={shelter.name}
-            //         address={shelter.street_address}
-            //         city={shelter.city}
-            //         state={shelter.state}
-            //         zipcode={shelter.zipcode}
-            //         email={shelter.email}
-            //         phone={shelter.phone}
-            //     />
-            // })
+        // console.log("shelter", this.props)
 
        return (
         <Fragment>
@@ -123,7 +62,7 @@ class ShelterContainer extends Component {
                         phone={shelter.phone}
                     />
                 }) }
-                {/* shelters */}
+               
             </div>
         </Fragment>
         ) 
@@ -132,7 +71,7 @@ class ShelterContainer extends Component {
 
 //structure what your props look like
 const mapStateToProps = state => {
-    console.log(state)
+    // console.log(state)
     return {
         shelters: state.shelterReducer.shelters,
         loading: state.shelterReducer.loading
