@@ -33,7 +33,7 @@ class PetContainer extends Component {
     }
 
     render() {
-        console.log("pets props", this.props)
+       // console.log("pets props", this.props)
 
         return (
             <Fragment>
@@ -48,6 +48,7 @@ class PetContainer extends Component {
                 <br />
                 <div className="grid">
                     {this.props.loading ? <h3>Loading...</h3> : this.filterPets().map((pet, index) => {
+//debugger 
                     <PetDisplay
                         key={index}
                         shelter_id={pet.shelter_id}
@@ -77,7 +78,7 @@ class PetContainer extends Component {
 
 //structure what your props look like
 const mapStateToProps = state => {
-    console.log("pet state", state)
+   // console.log("pet state", state)
     return {
         pets: state.petsReducer.pets,
         loading: state.petsReducer.loading
