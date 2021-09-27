@@ -20,7 +20,7 @@ const PetDisplay = (props) => {
           <Card.Text>{props.phone}</Card.Text>
         </Card.Body>
         <Card.Footer>
-            <small className="text-muted">{props.shelter_id}</small>
+            <small className="text-muted">{props.pet_id}</small>
         </Card.Footer>
       </Card>
     
