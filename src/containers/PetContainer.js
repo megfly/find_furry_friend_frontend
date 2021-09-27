@@ -76,7 +76,7 @@ class PetContainer extends Component {
 const mapStateToProps = state => {
     console.log("pet state", state)
     return {
-        pets: state.petsReducer.shelters,
+        pets: state.petsReducer.pets,
         loading: state.petsReducer.loading
     }
 }
