@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import "./Box.css"
 
 const PetDisplay = (props) => {
-  console.log("petdisplay", props)
+  //console.log("petdisplay", props)
 
     return (
     
