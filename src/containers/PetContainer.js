@@ -49,7 +49,8 @@ class PetContainer extends Component {
                 <div className="grid">
                     {this.props.loading ? <h3>Loading...</h3> : this.filterPets().map((pet, index) => {
 //debugger 
-                    <PetDisplay
+                    return <PetDisplay
+                     
                         key={index}
                         shelter_id={pet.shelter_id}
                         id={pet.id}
