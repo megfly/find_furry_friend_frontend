@@ -15,7 +15,7 @@ class PetContainer extends Component {
     }
 
     handleSearch = (event) => {
-        // console.log("search", event.target.value)
+        //console.log("search", event.target.value)
         this.setState({
             searchinput: event.target.value
         })
@@ -24,13 +24,24 @@ class PetContainer extends Component {
     filterPets = () => {
         if (this.state.searchinput !== '') {
             return this.props.pets.filter(pet => {
-                // debugger 
+              //  debugger 
                 return pet.breed.includes(this.state.searchinput)
             })
         } else {
             return this.props.pets
         }
     }
+
+    // filterShelters = () => {
+    //     if (this.state.searchinput !== '') {
+    //         return this.props.shelters.filter(shelter => {
+    //             // debugger 
+    //             return shelter.zipcode.includes(this.state.searchinput)
+    //         })
+    //     } else {
+    //         return this.props.shelters
+    //     }
+    // }
 
     render() {
        // console.log("pets props", this.props)
