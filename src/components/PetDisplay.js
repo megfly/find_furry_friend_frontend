@@ -12,12 +12,13 @@ const PetDisplay = (props) => {
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>
-          <Card.Text>{props.address}</Card.Text>
-          <Card.Text>{props.city}</Card.Text>
-          <Card.Text>{props.state}</Card.Text>
-          <Card.Text>{props.zipcode}</Card.Text>
-          <Card.Text>{props.email}</Card.Text>
-          <Card.Text>{props.phone}</Card.Text>
+          <Card.Text>{props.animal_type}</Card.Text>
+          <Card.Text>{props.age}</Card.Text>
+          <Card.Text>{props.breed}</Card.Text>
+          <Card.Text>{props.gender}</Card.Text>
+          <Card.Text>{props.color}</Card.Text>
+          <Card.Text>{props.size}</Card.Text>
+          <Card.Text>{props.vaccinated}</Card.Text>
         </Card.Body>
         <Card.Footer>
             <small className="text-muted">{props.pet_id}</small>
