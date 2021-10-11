@@ -20,7 +20,9 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 ReactDOM.render(
   // provider gives access to global state, and access to the store, and access to things like dispatch method & get state
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
