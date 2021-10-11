@@ -6,8 +6,10 @@ import ShelterContainer from '../containers/ShelterContainer'
 
 export default function Router() {
     return (
-        <div>
-            
-        </div>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/api/v1/pets" component={PetContainer} />
+            <Route exact path="/api/v1/shelters" component={ShelterContainer} />
+        </Switch>
     )
 }
