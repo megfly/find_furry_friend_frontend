@@ -11,6 +11,8 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import rootReducer from './reducers'
 //bootstrap
 // import "bootstrap/dist/css/bootstrap.min.css";
+// import react router
+import { BrowserRouter as Router } from 'react-router-dom';
 
 //setup redux store
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
