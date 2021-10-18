@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import  { connect }  from 'react-redux'
 import { getShelters } from '../actions/shelters'
 import ShelterDisplay from '../components/ShelterDisplay'
+import { Link } from "react-router-dom"
 
 class ShelterContainer extends Component {
     //local state
@@ -38,6 +39,10 @@ class ShelterContainer extends Component {
 
        return (
         <Fragment>
+            <br />
+                <Link to={`/`}>
+                    Home
+                </Link>
             <br />
             <input 
                 type="text"
