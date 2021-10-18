@@ -7,8 +7,8 @@ import {
 export default function Home() {
     return (
         <div>
-            Animal Shelters
-            <br />
+            <Link to={`/api/v1/shelters`}> Animal Shelters </Link>
+                <br />
             Pets 
         </div>
     )
