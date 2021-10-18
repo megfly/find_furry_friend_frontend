@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import  { connect }  from 'react-redux'
 import { getPets } from '../actions/pets'
 import PetDisplay from '../components/PetDisplay'
+import { Link } from "react-router-dom"
 
 class PetContainer extends Component {
     //local state
@@ -48,6 +49,10 @@ class PetContainer extends Component {
 
         return (
             <Fragment>
+                <br />
+                <Link to={`/`}>
+                    Home
+                </Link>
                 <br />
                 <input 
                     type="text"
