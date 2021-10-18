@@ -9,7 +9,7 @@ export default function Home() {
         <div>
             <Link to={`/api/v1/shelters`}> Animal Shelters </Link>
                 <br />
-            Pets 
+            <Link to={`/api/v1/pets`}> Pets </Link>
         </div>
     )
 }
